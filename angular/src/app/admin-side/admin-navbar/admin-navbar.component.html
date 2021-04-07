@@ -1,0 +1,17 @@
+<div id="adminNavbar">
+    <nav class="navbar col-12">
+      <p class="navbar-brand logo font-weight-bolder "  tabindex="1">Neo Bikes</p>
+      <a id="adminDashBoardLink" routerLink="/admin/dashboard" class="nav-elements" tabindex="2"><span class="material-icons">
+        speed
+        </span>Dashboard</a>
+      <a id="adminProfileLink" routerLink="/admin/profile" class="nav-elements" tabindex="3"><span class="material-icons">
+        account_circle
+        </span>Profile</a>
+      <a id="adminBookingLink" routerLink="/admin/bookings" class="nav-elements" tabindex="4"><span class="material-icons">
+        book
+        </span>Bookings</a>
+      <a id="adminLogoutButton" (click)="logout()" class="nav-elements" tabindex="5"><span class="logout material-icons">
+          logout</span> Logout</a>
+    </nav>
+  </div>
+  

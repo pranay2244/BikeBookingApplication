@@ -1,0 +1,38 @@
+#adminNavbar{
+    background-color: rgba(255, 166, 0,0.8);
+    /* width: 100vw; */
+
+    /* height: 60px; */
+    margin-bottom: 10px;
+    box-shadow: #8d8b8b 5px 5px 15px 5px ;
+ }
+.logo{
+    color: #ffffff;
+   
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a{
+    color: black;
+    display: block;
+    box-sizing: border-box;
+    padding: 0.5rem;
+}
+a:focus{
+    background-color: chartreuse;
+    border:none;
+}
+a:hover{
+    background-color: rgb(172, 231, 112);
+    border: #ffffff solid 2px;
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+.logout{
+    font-size:1.5rem;
+}
+.nav-elements{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

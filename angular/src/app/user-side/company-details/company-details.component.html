@@ -1,0 +1,13 @@
+<app-user-navbar></app-user-navbar>
+<div id="companyDetails">
+    <div class="company  col-11">
+        <div>
+            <h3>{{company.companyName}}</h3>
+            <p>{{company.companyAddress}}</p>
+            <p>{{company.mobileNumber}}</p>
+        </div>
+    </div>
+    <div class="col-11"  *ngFor="let each of details">
+        <div (click)="gotoBikeDetails(each)"><app-bike [Bike]="each"></app-bike></div>
+    </div>
+</div>

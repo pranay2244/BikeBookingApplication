@@ -1,0 +1,94 @@
+.body {
+  height: 90px;
+  padding: 5px;
+  padding-top: 15px;
+  background-color: rgba(175, 169, 160, 0.2);
+  box-sizing: border-box;
+  border: 1px solid rgba(190, 184, 184,0.5);
+}
+h2 {
+  text-align: center;
+}
+
+.delete {
+  background-color: red;
+  max-width: 40px;
+  max-height: 40px;
+  display: flex;
+  border-radius: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+.delete > span {
+  font-size: 30px;
+}
+.edit {
+  background-color: rgb(255, 174, 0);
+  max-width: 40px;
+  max-height: 40px;
+  display: flex;
+  border-radius: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  color: aliceblue;
+}
+.edit > span {
+  font-size: 35px;
+}
+.earnings {
+  height: 50vh;
+  /* display: flex; */
+  margin-top: 15px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(175, 169, 160, 0.2);
+}
+.addBike {
+  margin-top: 15px;
+  height: 30vh;
+  background-color: rgba(175, 169, 160, 0.2);
+  align-items: center;
+  justify-content: center;
+}
+.addbike-btn {
+  background-color: rgb(255, 174, 0);
+  max-height: 40px;
+  padding: 2px;
+}
+.addbike-btn > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.line {
+  height: 1px;
+  background-color: rgb(38, 38, 39);
+  width: 80%;
+}
+
+.available {
+  background-color: green;
+  color: aliceblue;
+}
+
+.notavailable {
+  background-color: red;
+  color: aliceblue;
+}
+.eachBike{
+    margin-top: 20px;
+}
+.items{
+    /* margin-top: 10px; */
+    /* background-color: rebeccapurple; */
+    margin: 0 auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.status{
+    border-radius: 8px 8px 0  0;
+}

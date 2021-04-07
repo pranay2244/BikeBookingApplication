@@ -1,0 +1,23 @@
+<app-admin-navbar></app-admin-navbar>
+<div id="adminBokkings">
+    <div id="bookingList">
+        <div class="header row col-12">
+          <div class="col-2">Booking ID</div>
+          <div class="col-2">UserID</div>
+          <div class="col-2">Bike Model</div>
+          <div class="col-2">Rent</div>
+          <div class="col-2">Days</div>
+          <div class="col-2">Total Price</div>
+        </div>
+        
+        <div *ngFor="let each of details" class="body row col-12">
+          <div class="col-2">{{each.bookingId}}</div>
+          <div class="col-2">{{each.userId}}</div>
+          <div class="col-2">{{each.bikeModel}}</div>
+          <div class="col-2">{{each.rent}}</div>
+          <div class="col-2">{{each.days}}</div>
+          <div class="col-2">{{each.totalPrice}}</div>
+        </div>
+      </div>
+      
+</div>

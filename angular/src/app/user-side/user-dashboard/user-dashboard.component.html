@@ -1,0 +1,13 @@
+<app-user-navbar></app-user-navbar>
+<br />
+<div
+class="col-11"
+  id="userDashboard"
+  *ngFor="let each of details" 
+>
+<div (click)="navigateToCompany(each)"  >
+  <app-company [thisCompany]="each"></app-company></div>
+<!-- [routerLink]="['/user/companyDetail',each]"  -->
+
+<!-- [routerLink]="['/user/companyDetail/',each.companyId]" -->
+</div>

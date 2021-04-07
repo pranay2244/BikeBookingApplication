@@ -1,0 +1,18 @@
+<app-admin-navbar></app-admin-navbar>
+<form loginform="ngForm" id="addBikeBox">
+    <div>
+      <b></b><button id="back" (click)="onBack()">back</button>
+   </div>
+   <label class="form-group"><p>Bike Model</p>
+      <input type="text" class="input" name="bikeModel" #bikeModel="ngModel" [(ngModel)]="user.bikeModel" id="bikeModel" [ngModelOptions]="{standalone:true}">
+   </label>
+   <label class="form-group"><p>Bike Rent Price</p>
+       <input type="text" class="input" name="bikePrice" #bikePrice="ngModel" [(ngModel)]="user.bikePrice" id="bikePrice" [ngModelOptions]="{standalone:true}">   
+   </label>
+   <label class="form-group"><p>Bike Type</p>
+       <input type="text" class="input" name="bikeType" #bikeType="ngModel" [(ngModel)]="user.bikeType" id="bikeType" [ngModelOptions]="{standalone:true}">  
+   </label>
+   <label>
+       <button type="submit" id="submitButton" [disabled]="(!user.bikePrice || !user.bikeModel || !user.bikeType)" (click)="onSubmit(user.bikeModel,user.bikePrice,user.bikeType)">AddBike</button>
+   </label>
+</form>

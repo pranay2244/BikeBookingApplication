@@ -1,0 +1,18 @@
+
+.eachBikes{
+    margin: 10px auto;
+    background-color: rgba(203, 211, 218,0.3);
+    height: 80px;
+    align-items: center;
+}
+#companyDetails{
+    margin-top: 50px;
+}
+span{
+    color: green;
+    font-weight: 500;
+    font-size: large;
+}
+.booked{
+    color: red;
+}

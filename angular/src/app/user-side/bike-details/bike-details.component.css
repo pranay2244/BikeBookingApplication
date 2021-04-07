@@ -1,0 +1,53 @@
+
+#bikeBookingPage{
+    width: 99%;
+    margin: 30px auto;
+}
+
+.btn{
+    display: block;
+    width: 200px;
+    margin: 0 auto;
+}
+.details{
+    font-weight: bold;
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.details>.row{
+    /* background-color: blue; */
+    width: 100%;
+    line-height: 30px;
+    height: auto;
+}
+.description{
+    height: 150px;
+    background-color: rgba(179, 175, 175,0.2);
+    width: 90%;
+    margin: 0 auto;
+    justify-content: center;
+    padding: 10px;
+    font-weight: normal;
+    line-height: normal;
+
+}
+span{
+    font-weight: normal;
+    color: #000000;
+    margin-left: 7% ;
+}
+.container{
+    margin: 30px auto;
+}
+.descriptiondiv{
+    width: 90%;
+    margin: 10px auto;
+}
+.descriptiondiv>p{
+    font-weight: bold;
+    
+}

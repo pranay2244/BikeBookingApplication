@@ -1,0 +1,80 @@
+<!--<div style="background-color:orange;width:200%;height:70px;">
+    <span>NeoBikes</span>
+    <a href="" style="height:70px;" class="w3-bar-item w3-button">Dashboard</a>
+	<a href="" style="height:70px;" class="w3-bar-item w3-button">Profile</a>
+	<a href="" style="height:70px;" class="w3-bar-item w3-button">My Booking</a>
+</div>-->
+<app-admin-navbar></app-admin-navbar>
+<!-- <div id="adminProfile">
+<div class="w3-sidebar w3-bar-block w3-card" style="width:25%;height:550px;right:0;margin-top:0.5px;padding-left:90px;padding-top:10px;background-color:lightgrey;">
+    <img [src]="url" class="rounded-circle" style="padding-top:50px" width="150">
+    <br><br>
+    <button id ="editAdminProfile" type="button"style="margin-left:25px;margin-top:10px;background-color:orange;">Edit Profile</button>				
+</div>
+<div class="container" *ngFor="let e of lis;" style="background-color:lightgrey;width:60%;position:absolute;margin-left:100px;margin-top:15px;" >
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-3">
+              <h5 style="padding-left:20px;">Name<span style="padding-left:105px">:{{ Name }}</span>
+              <span style="padding-left:200px">CompanyName<span style="padding-left:50px">:{{ CompanyName }}</span></span></h5>
+            </div>
+        </div>
+    <br>
+        <div class="row">
+                <div class="col-md-3">
+                   <h5 style="padding-left:20px;">Email<span style="padding-left:110px">:{{ Email }}</span>
+                   <span style="padding-left:200px">CompanyAddress<span style="padding-left:37px">:{{ CompanyAddress }}</span></span></h5>
+                </div>
+        </div>
+    <br>	
+        <div class="row">
+            <div class="col-md-3">
+                <h5 style="padding-left:20px;">Password<span style="padding-left:80px">:{{ Password }}</span></h5>
+            </div>
+        </div>
+    <br>	
+        <div class="row">
+            <div class="col-md-3">
+                <h5 style="padding-left:20px;">MobileNumber<span style="padding-left:28px">:{{ MobileNumber }}</span></h5>
+            </div>
+        </div>
+    </div>
+</div> 
+</div>
+
+ -->
+
+ <div id="adminProfile ">
+    <div class="row body ">
+        <div class="col-7 details row">
+            <div class="col-6 detailsItems">
+                <p>Name</p>
+                <p>Email</p>
+                <p>Mobile Number</p>
+                <p>Password</p>
+                <p>CompanyName</p>
+                <p>CompanyAddress</p>
+
+            </div>
+            <div class="col-6 detailsItems">
+                <p>: {{details.sellerName}}</p>
+                <p>: {{details.email}}</p>
+                <p>: {{details.mobileNumber}}</p>
+                <p>: {{passwordString}}</p>
+                <p>: {{details.companyName}}</p>
+                <p>: {{details.companyAddress}}</p>
+            </div>
+
+        </div>
+        <div class="col-5 sidebar row">
+            <div class="imageContainer col-12">
+            <img [src]="details.companyImageURL" alt="this is profile image">
+            </div>
+            <button class="btn btn-success editButton col-12" id="editAdminProfile" (click)="goToEdit()">Edit Profile</button>
+
+        </div>
+    </div>
+</div>
+
+
+

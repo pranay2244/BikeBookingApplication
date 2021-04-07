@@ -1,0 +1,13 @@
+<app-super-admin-navbar></app-super-admin-navbar>
+<div id="allUserDetails">
+    <div class="eachUser row" *ngFor="let each of allUsers" >
+        <div class="col-2 "><img class="companyImage" [src]="each.companyImageURL" alt="company"></div>
+        <div  class="col-2">{{ each.sellerName }}</div>
+        <div  class="col-2">{{each.companyName}}</div>
+        <div class="col-2">{{ each.companyAddress }}</div>
+        <div class="col-2">{{ each.mobileNumber }}</div>
+        <button class="btn delete" (click)="delete(each)"><span class="material-icons">
+            delete_outline
+            </span></button>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<form  loginform="ngForm" id="superAdminLoginBox">
+   
+    <h3>Super Admin</h3>
+    
+        <label class="form-group" [class.has-error]="Email.invalid && Email.touched">
+          <input required type="email" class="input" #Email="ngModel" name="Email" placeholder="Enter Super Admin Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" [(ngModel)]="user.Email"  [ngModelOptions]="{standalone:true}">
+          <div class="alert-danger" *ngIf="Email.errors?.pattern">Invalid Email!!</div>
+          <span class="help-block" *ngIf="Email.invalid && Email.touched && !Email.errors?.pattern">Email is required</span>
+        </label>
+        <label class="form-group" [class.has-error]="Password.invalid && Password.touched">
+            <input required type="password" class="input" name="Password" #Password="ngModel"  placeholder="Enter Password" id="password" [(ngModel)]="user.Password" pattern="[a-zA-Z0-9@#/*]{8,}"  [ngModelOptions]="{standalone:true}">   
+            <div class="alert-danger" *ngIf="Password.errors?.pattern">Invalid Password!!</div>
+            <span class="help-block" *ngIf="Password.invalid && Password.touched && !Password.errors?.pattern">Password is required</span>
+          </label> 
+        <label><button type="submit" class="lk" id="submitButton" ng-required="Email" [disabled]="user.Email === '' || user.Password === ''" (click)="onSubmit(user.Email,user.Password)">Submit</button></label>
+       
+    </form>
+    

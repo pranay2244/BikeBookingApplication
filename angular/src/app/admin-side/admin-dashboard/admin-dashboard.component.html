@@ -1,0 +1,48 @@
+<app-admin-navbar></app-admin-navbar>
+<div id="adminDashboard">
+  <div class="row col-12">
+    <div class="bikeDetails col-8">
+      <h2>{{company.companyName}}</h2>
+      <div *ngFor="let each of details">
+        <div class="eachBike">
+          <div class="col-2 available status" *ngIf="each.status=='Available'">{{ each.status }}</div>
+          <div class="col-2 notavailable status"  *ngIf="each.status!='Available'">{{ each.status }}</div>
+          <div class="body">
+            <div >
+                <div class="row items col-10">
+                  <div class="col-6">Bike Model : {{ each.bikeNo }}</div>
+                <div class="col-2">{{ each.type }}</div>
+                <div class="col-2"><button (click)="edit(each)" class="btn edit ">
+                  <span class="material-icons"> create </span>
+                </button></div>
+                <div class="col-2">
+                  <button (click)="delete(each)" class="btn delete col-3">
+                    <span class="material-icons"> delete_outline </span>
+                  </button>
+                </div>
+                </div>
+              </div>
+              <div class="price">Price : $ {{ each.price }} | per day</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="earnings card card-block d-flex">
+        <h3>Earnings</h3>
+        <p>Total Today</p>
+        <p>${{ 200 }}</p>
+        <div class="line"></div>
+        <br>
+        <p>Monthly</p>
+        <p>${{ totalEarnings }}</p> .
+      </div>
+      <div class="addBike card d-flex">
+        <p>Want to add New Bike</p>
+        <button routerLink="/admin/addBike" class="btn addbike-btn col-6 "><span><span class="material-icons">
+            control_point
+            </span> Add Bike</span></button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+#allUserDetails{
+    margin-top: 40px;
+}
+.row{
+    margin: 0 auto;
+}
+.eachUser{
+   width: 98%;
+    padding: 5px;
+    /* align-items: center; */
+    /* border-radius: 50px; */
+    /* justify-content: space-around; */
+     margin: 20px auto;
+    background-color: rgba(203, 211, 218,0.3);
+    min-height: 80px;
+    align-items: center;
+}
+
+.companyImage{
+    height: 60px;
+    width: 60px;  
+    margin: 0 auto;
+    /* background-color: red; */
+    border-radius: 50%;
+    
+}
+span{
+    font-size: 30px;
+    color: aliceblue;
+
+}
+.delete{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+}

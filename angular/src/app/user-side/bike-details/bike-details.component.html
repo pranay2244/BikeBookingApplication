@@ -1,0 +1,44 @@
+<app-user-navbar></app-user-navbar>
+<div id="bikeBookingPage" class="row">
+    <div class="col-6">
+       <div class="image">
+        <img [src]="imageurl" class="img-fluid" alt="Bike Image">
+       </div>
+       <!-- <div class="row container">
+       <div class="sampleimages col-5 col-md-5 col-sm-12" *ngFor="let item of bike.sampleimages">
+            <div >{{item}}</div>
+       </div>
+       </div> -->
+    </div>
+    <div class="col-6">
+        <div class="details col-12">
+            <div class="row">
+                <div class="col-6">
+                    <p>Bike Model </p>
+                    <p>Price </p>
+                    <p>Type   </p>
+                </div>
+                <div class="col-6">
+                    <p> :<span>{{bike.bikeNo}}</span></p>
+                
+                   <p> :<span>{{bike.price}} </span></p>
+                    <p>:<span>{{bike.type}}  </span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- {{bikeDetails.type}} -->
+        <!--  -->
+        <!--  -->
+           
+       
+        
+    </div>
+    <div class="descriptiondiv">
+        <p>Description</p>
+        <div class="description">Honda bikes price starts at ₹ 62,229. Honda has a total of 21 bikes of which 4 models are upcoming which include CB500F, CBR1000RR-R Fireblade, CBR500R and CBR300R. The Honda Africa Twin [2021] is the most expensive bike with a price tag of ₹ 17.51 Lakh. Select a Honda bike to find out its latest price, specifications, features and more.</div>
+        <br>
+        <button [disabled]="bike.status!='Available'" (click)="bookBike()" class="btn btn-success">Book the Bike</button>
+    </div>
+    
+</div>

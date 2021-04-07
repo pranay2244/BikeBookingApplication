@@ -1,0 +1,39 @@
+<app-user-navbar></app-user-navbar>
+<form loginform="ngForm" id="editprofileBox">
+    <div>
+      <button id="back" (click)="onBack()"><b></b>back</button>
+   </div>
+   <div>
+   <label class="form-group"><p>Name</p>
+      <input type="text" class="input" name="Name" #Name="ngModel" [(ngModel)]="user.username" id="username" [ngModelOptions]="{standalone:true}">
+   </label>
+   <label class="form-group" [class.has-error]="Email.invalid"><p>Email</p>
+       <input type="text" class="input" name="Email" #Email="ngModel" [(ngModel)]="user.email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" [ngModelOptions]="{standalone:true}">       
+      <div class="line-box">
+      <div class="line"></div>
+      <div class="alert-danger" *ngIf="Email.errors?.pattern">Invalid Email!!</div>
+    </div>
+  </label>
+   <label class="form-group" [class.has-error]="Password.invalid"><p>Password</p>
+       <input type="text" class="input" name="Password" #Password="ngModel" [(ngModel)]="user.password" id="password" pattern="[a-zA-Z0-9@#/*]{8,}" [ngModelOptions]="{standalone:true}">  
+       <div class="line-box">
+      <div class="line"></div>
+        <div class="alert-danger" *ngIf="Password.errors?.pattern">Invalid Password!!</div>
+    </div>
+  </label>
+   <label class="form-group"><p>Age</p>
+    <input type="text" class="input" name="Age" #Age="ngModel" [(ngModel)]="user.age" id="userAge" [ngModelOptions]="{standalone:true}">  
+</label>
+<label class="form-group" [class.has-error]="MobileNumber.invalid"><p>MobileNumber</p>
+    <input type="text" class="input" name="MobileNumber" #MobileNumber="ngModel" [(ngModel)]="user.mobileNumber" id="mobilenumber" pattern="\d{10}" [ngModelOptions]="{standalone:true}">  
+    <div class="line-box">
+        <div class="line"></div>
+          <div class="alert-danger" *ngIf="MobileNumber.errors?.pattern">Invalid MobileNumber!!</div>
+      </div>
+</label>
+   <label>
+       <button type="submit" id="editProfileButton" [disabled]="isDisabled()"  (click)="onSubmit(user.username,user.email,user.password,user.age,user.mobileNumber)"><p>Save Changes</p></button>
+   </label>
+   </div>
+</form>
+

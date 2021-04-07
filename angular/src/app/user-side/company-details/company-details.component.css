@@ -1,0 +1,16 @@
+.company{
+    background-color: rgba(203, 211, 218,0.3);
+    margin: 10px  auto 10px auto;
+    border: none;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.company>div{
+    text-align: center;
+
+}
+.col-11{
+    margin: 0 auto;
+}

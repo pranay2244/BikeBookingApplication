@@ -1,0 +1,20 @@
+<app-super-admin-navbar></app-super-admin-navbar>
+<div id="allAdminDetails">
+  <div class="header row col-11">
+    <div class="col-2">Admin Id</div>
+    <div class="col-2">Company Name</div>
+    <div class="col-2">Bike Model</div>
+    <div class="col-2">Rent</div>
+    <div class="col-2">Days</div>
+    <div class="col-2">Total Price</div>
+  </div>
+
+  <div *ngFor="let each of details" class="body row col-11">
+    <div class="col-2">{{ each.adminId}}</div>
+    <div class="col-2">{{ each.companyName }}</div>
+    <div class="col-2">{{ each.bikeModel }}</div>
+    <div class="col-2">{{ each.rent }}</div>
+    <div class="col-2">{{ each.days }}</div>
+    <div class="col-2">{{ each.totalPrice }}</div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div class="eachBikes row ">
+    <div class="bikeDetails col-3">Bike Model : {{ Bike.bikeNo }}</div>
+<div class="bikeDetails col-3">{{ Bike.price }}</div>
+<div class="bikeDetails col-3">{{ Bike.type }}</div>
+<div class="bikeDetails col-3">
+  <span *ngIf="Bike.status!='Available'" class="booked">Booked</span
+  ><span *ngIf="Bike.status=='Available'">Available </span>
+</div>
+</div>

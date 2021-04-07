@@ -1,0 +1,87 @@
+
+<form loginform="ngForm" id="signupBox">
+    <h3>SIGNUP</h3>
+    <label class="form-group" [class.has-error]="Email.invalid && Email.touched">
+      <input required type="email" class="input" name="Email" #Email="ngModel" [(ngModel)]="user.Email" placeholder="Enter Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" [ngModelOptions]="{standalone:true}">
+      <div class="line-box">
+        <div class="line">
+      
+        </div>
+        <div class="alert-danger" *ngIf="Email.errors?.pattern">Invalid Email!!</div>
+          <span class="help-block" *ngIf="Email.invalid && Email.touched && !Email.errors?.pattern">Email is required</span>
+      </div>
+    </label>
+    <label class="form-group" [class.has-error]="Password.invalid && Password.touched">
+        <input required type="password" class="input" name="Password" #Password="ngModel" [(ngModel)]="user.Password" placeholder="Enter Password" id="password" [ngModelOptions]="{standalone:true}" pattern="[a-zA-Z0-9@#/*]{8,}">
+        <div class="line-box">
+          <div class="line"></div>
+            <div class="alert-danger" *ngIf="Password.errors?.pattern">Invalid Password!!</div>
+            <span class="help-block" *ngIf="Password.invalid && Password.touched && !Password.errors?.pattern">Password is required</span>
+        </div>
+      </label>
+      <label class="form-group" [class.has-error]="Mobilenumber.invalid && Mobilenumber.touched">
+        <input required type="tel" class="input" name="Mobilenumber" #Mobilenumber="ngModel" [(ngModel)]="user.Phonenumber" placeholder="Enter Mobile Number" id="mobilenumber" [ngModelOptions]="{standalone:true}" pattern="\d{10}">
+        <div class="line-box">
+          <div class="line">
+            
+          </div>
+          <div class="alert-danger" *ngIf="Mobilenumber.errors?.pattern">Invalid Mobilenumber!!</div>
+            <span class="help-block" *ngIf="Mobilenumber.invalid && Mobilenumber.touched && !Mobilenumber.errors?.pattern">Mobilenumber is required</span>
+        </div>
+      </label>
+      <label>
+        <select [(ngModel)]="user.Userrole" (ngModelChange)="onChange($event)" id="userrole" name="userrole" [ngModelOptions]="{standalone:true}">
+          <option selected value="1">User</option>
+          <option value="2">Admin</option>
+        </select>
+      </label>
+    <div class="show" *ngIf="show; else elseBlock">
+        <label>
+        <input type="text" class="input" name="Username" #UserName="ngModel" [(ngModel)]="user.Username" placeholder="Enter Username" id="username" [ngModelOptions]="{standalone:true}">
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+        </label>
+        <label>
+        <input type="text" class="input" name="Age" #UserName="ngModel" [(ngModel)]="user.Age" placeholder="Enter Age" id="age" [ngModelOptions]="{standalone:true}">
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+        </label>
+    </div>
+    <ng-template #elseBlock>
+    <div class="show">
+        <label>
+        <input type="text" class="input" name="Adminname" #UserName="ngModel" [(ngModel)]="user.Sellername" placeholder="Enter Seller Name" id="adminname" [ngModelOptions]="{standalone:true}">
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+        </label>
+        <label>
+        <input type="text" class="input" name="companyName" #UserName="ngModel" [(ngModel)]="user.Companyname" placeholder="Enter Company Name" id="companyname" [ngModelOptions]="{standalone:true}">
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+        </label>
+        <label>
+            <input type="text" class="input" name="companyAddress" #UserName="ngModel" [(ngModel)]="user.Imageurl" placeholder="Enter Company Image Url" id="companyImagrURL" [ngModelOptions]="{standalone:true}">
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+        <label>
+            <input type="text" class="input" #UserName="ngModel" [(ngModel)]="user.Companyaddress" placeholder="Enter CompanyAddress" id="companyAddress" [ngModelOptions]="{standalone:true}">
+            <div class="line-box">
+                <div class="line"></div>
+            </div>
+        </label>
+    </div>
+    <label><button type="submit" id="submitButton" [disabled]="(!user.Email || !user.Password || !user.Phonenumber || !user.Userrole || !user.Sellername || !user.Companyname || !user.Imageurl || !user.Companyaddress)" (click)="onSubmit1(user.Email,user.Password,user.Phonenumber,user.Userrole,user.Sellername,user.Companyname,user.Imageurl,user.Companyaddress)">submit</button></label>
+    Go to Login <a (click)="gotoLogin()" id="loginLink">Click Here</a>
+  </ng-template>
+  <div *ngIf="show">
+    <label><button type="submit" id="submitButton" ng-required="Email" [disabled]="(!user.Email || !user.Password || !user.Phonenumber || !user.Userrole || !user.Username || !user.Age)" (click)="onSubmit(user.Email,user.Password,user.Phonenumber,user.Userrole,user.Username,user.Age)">submit</button></label>
+    Go to Login <a (click)="gotoLogin()" id="loginLink">Click Here</a>
+  </div>
+  </form>
+  

@@ -1,0 +1,17 @@
+<div id="userNavbar">
+    <nav class="navbar col-12">
+      <p class="navbar-brand logo font-weight-bolder "  tabindex="1">Neo Bikes</p>
+      <a id="userDashBoardLink" routerLink="/user/dashboard" class="nav-elements" tabindex="2"><span class="material-icons">
+        speed
+        </span>Dashboard</a>
+      <a id="userProfileLink" (click)="profile()" class="nav-elements" tabindex="3"><span class="material-icons">
+        account_circle
+        </span>Profile</a>
+      <a id="userBookingLink" routerLink="/user/bookings" class="nav-elements" tabindex="4"><span class="material-icons">
+        book
+        </span>My Booking</a>
+      <a id="userLogoutButton" (click)="logout()" class="nav-elements" tabindex="5"><span class="logout material-icons">
+          logout</span>Logout</a>
+    </nav>
+  </div>
+  

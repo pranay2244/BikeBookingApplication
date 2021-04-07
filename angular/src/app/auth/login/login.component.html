@@ -1,0 +1,32 @@
+<!-- <div class="d-flex justify-content-center loaderContainer">
+  <div class="spinner-border" role="status">
+      <span class="sr-only" id="loader"></span>
+  </div>
+</div> -->
+<div class="formbody">
+  <form  loginform="ngForm" id="loginBox">
+    <h3>LOGIN</h3>
+    <div class="radio-toolbar">
+        <input type="radio"  class="input" #utype="ngModel" id="user" name="utype" value="user" [(ngModel)]="user.utype" checked >
+        <label for="user">User</label>
+        <input type="radio" class="input" #utype="ngModel" id="admin" name="utype" value="admin" [(ngModel)]="user.utype">
+        <label for="admin">Admin</label>
+    </div>
+   
+
+    <label class="form-group" [class.has-error]="Email.invalid && Email.touched">
+      <input required type="email" class="input" #Email="ngModel" name="Email" placeholder="Enter Email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}" [(ngModel)]="user.Email">
+      <div class="alert-danger" *ngIf="Email.errors?.pattern">Invalid Email!!</div>
+      <span class="help-block  text-danger" *ngIf="Email.invalid && Email.touched && !Email.errors?.pattern">Email is required</span>
+    </label>
+    <label class="form-group" [class.has-error]="Password.invalid && Password.touched">
+        <input required type="password" class="input" name="Password" #Password="ngModel"  placeholder="Enter Password" id="password" [(ngModel)]="user.Password" pattern="[a-zA-Z0-9@#/*]{8,}">   
+        <div class="alert-danger" *ngIf="Password.errors?.pattern">Invalid Password!!</div>
+        <span class="help-block text-danger" *ngIf="Password.invalid && Password.touched && !Password.errors?.pattern">Password is required</span>
+      </label> 
+    <label><button type="submit" class="lk" id="submitButton" ng-required="Email" [disabled]="user.Email === '' || user.Password === '' || user.Password.length<8" (click)="onSubmit(user.Email,user.Password,user.utype)">submit</button></label>
+    New to Booking? <a (click)="signup(user.utype)" id="userSignupLink">Click Here</a>
+</form>
+
+
+</div>
